@@ -1,0 +1,26 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      routes:
+        - id: payment8001_routh
+          uri: http://localhost:8001
+          predicates:
+            - Path=/payment/get/**
+        - id: payment9001_routh
+          uri: http://localhost:9001
+          predicates:
+            - Path=/payment/nacos/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

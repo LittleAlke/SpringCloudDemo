@@ -18,6 +18,7 @@
       <module>cloudalibaba-consumer-order-nacos-order83</module>
       <module>cloudalibaba-config-nacos-client3377</module>
       <module>cloud-gateway-gateway9527</module>
+      <module>cloudalibaba-sentinel-service8401</module>
   </modules>
 
 
